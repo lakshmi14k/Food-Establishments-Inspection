@@ -63,34 +63,29 @@ Analyzed 1.9M+ food safety inspection records across Chicago and Dallas to ident
 - **Visualization:** Tableau
 - **Data Profiling:** ydata-profiling, Alteryx
 
-**Project Structure:**
+## Project Structure
 ```
 Food-Establishments-Inspection/
 ├── README.md
-├── data/
-│   ├── raw/
-│   │   ├── Chicago.tsv                  Chicago food inspections (268K records)
-│   │   └── Dallas.tsv                   Dallas restaurant inspections (78K records)
-│   ├── processed/
-│   │   ├── Chicago - Cleaned.csv        Normalized violation data
-│   │   └── Dallas - Cleaned.csv         Standardized format
-│   └── profiling/
-│       ├── ydata_chicago.html           Data quality assessment report
-│       └── ydata_dallas.html            Data quality assessment report
-├── python/
-│   └── clean_data.py                    Python cleaning script (reproducibility)
-├── etl/
-│   ├── Chicago_Profiling.yxmd           Alteryx data profiling workflow
-│   └── Dallas_Profiling.yxmd            Alteryx data profiling workflow
-├── sql/
-│   ├── DDL_Script.sql                   Star schema creation (7 dimensions, 2 facts)
-│   └── Validation_Script.sql            Data integrity checks
-├── tableau/
-│   ├── Tableau_Workbook.twb             Interactive dashboards
-│   └── Dashboard_Preview.pdf            Static dashboard export
-└── docs/
-    ├── Dimensional_Model.png             Star schema diagram
-    └── Project_Documentation.pdf         Full technical documentation
+├── Datasets/
+│   ├── Raw/
+│   │   ├── Chicago.tsv                 # Chicago food inspections (268K records)
+│   │   └── Dallas.tsv                  # Dallas restaurant inspections (78K records)
+│   └── Processed/
+│       ├── Chicago - Cleaned.csv       # Normalized violation data
+│       └── Dallas - Cleaned.csv        # Standardized format
+├── Python/
+│   └── Staged.py                       # Python cleaning script
+├── ETL/
+│   └── ETL_Workflow.docx              # Alteryx/Talend workflow documentation
+├── Profiling/
+│   ├── Chicago_Profiling.yxmd          # Alteryx data profiling workflow
+│   ├── Dallas_Profiling.yxmd           # Alteryx data profiling workflow
+│   └── Profiling_Workflows.docx        # Profiling process documentation
+├── Model/
+│   ├── Dimensional_Model.png           # Star schema diagram
+│   └── Model_Script.docx               # DDL documentation
+└── 
 ```
 
 **Database Schema:** Star Schema Design
@@ -127,7 +122,7 @@ Dim_Violation ──────────────────────
 
 **Technical Implementation:**
 
-ETL Pipeline:
+**ETL Pipeline:**
 
 **Phase 1: Data Extraction:**
 - Downloaded TSV files from city open data portals
@@ -268,4 +263,3 @@ GO
 
  Built with _SQL Server, Python, Alteryx, Talend, and Tableau_
 
-**For detailed technical documentation, click [here](docs/Project_Documentation.pdf)**
