@@ -77,7 +77,11 @@ Food-Establishments-Inspection/
 ├── Python/
 │   └── Staged.py                       # Python cleaning script
 ├── ETL/
-│   └── ETL_Workflow.docx              # Alteryx/Talend workflow documentation
+│   ├── Chicago/                        # Chicago ETL workflows
+│   ├── Dallas/                         # Dallas ETL workflows
+│   ├── Dimension/                      # Dimension table workflows
+│   ├── Facts/                          # Fact table workflows
+│   └── ETL_Workflow.docx               # Talend workflow documentation
 ├── Profiling/
 │   ├── Chicago_Profiling.yxmd          # Alteryx data profiling workflow
 │   ├── Dallas_Profiling.yxmd           # Alteryx data profiling workflow
