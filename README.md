@@ -89,6 +89,10 @@ Food-Establishments-Inspection/
 ├── Model/
 │   ├── Dimensional_Model.png           # Star schema diagram
 │   └── Model_Script.docx               # DDL documentation
+├── Viz/
+│   ├── Food Establishments Inspections # Tableau Document
+|   ├── Master Script.py                # Python script for Combined dataset
+│   └── Master Load .csv                # Dataset(Combined)
 └── 
 ```
 
